@@ -1,5 +1,4 @@
 let readlineSync = require('readline-sync');
-const path = require('path');
 let fs = require('fs');
 let nl = '\n';
 let dnl = '\n\n';
