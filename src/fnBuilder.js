@@ -7,6 +7,10 @@ module.exports = class fnBuilder {
         this.vs = vs.vs;
     }
 
+    addVariable(type, variable, val) {
+        return this.vs.nl + this.vs.tab + type + ' ' + variable + ' = \'' + val.replace(',', ', ') + '\';';
+    }
+
     addFunction(functionDetails, lines = []){
         return this.vs.nl + this.vs.tab + functionDetails + this.vs.nl + this.vs.tab + '{' + this.addLines(lines) + this.vs.tab + '}';
     }

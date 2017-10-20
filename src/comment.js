@@ -15,8 +15,17 @@ module.exports = class comment {
 		this.data = {};
 	}
 
+	getVariableComment(type, variable, description){
+		var ret = '';
+		var tabWidth = 1;
+		ret += this.vs.nl.repeat(2) + this.vs.tab.repeat(tabWidth) + '/**';
+		ret += this.vs.nl + this.vs.tab.repeat(tabWidth) + '* @var ' +type + ' ' + variable + ' ' + description;
+		ret += this.vs.nl + this.vs.tab.repeat(tabWidth) + '*/';
+		return ret;
+	}
+
 	getMethodComment(type){
-		this.setType(type);
+		this.setMethodType(type);
 		var tabWidth = 1;
 		var ret = '';
 		ret += this.vs.nl.repeat(2) + this.vs.tab.repeat(tabWidth) + '/**';
@@ -30,7 +39,7 @@ module.exports = class comment {
 		return ret;
 	}
 
-	setType(type){
+	setMethodType(type){
 		var c = {};
 		switch(type){
 			case 'constructor':

@@ -21,7 +21,7 @@ module.exports = class fileExporter {
               stream.write(data);
               stream.end();
               console.log(file + ' successfully generated!');
-              process.exit(0);
+              
             });
     }
 }

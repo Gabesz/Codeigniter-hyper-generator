@@ -25,6 +25,12 @@ module.exports = class classBuilder {
         this.classSource.push(comment + method);
     }
 
+    addVariable(type, variable, description, val){
+        var comment = this.commentInstance.getVariableComment(type, variable, description);
+        var variable = this.fnBuilderInstance.addVariable('protected', variable, val);
+        this.classSource.push(comment + variable);
+    }
+
     getClassSourceString(){
         return this.openTag + this.classDefinition + this.classSource.join("") + this.closeTag;
     }

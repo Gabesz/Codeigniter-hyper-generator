@@ -29,7 +29,9 @@ function setQuestion(index) {
 		setQuestion(index);
 	}else{
 		var results = new generator(answers, vs.vs);
-		new fileExporter(answers[1], outputPath + '/controller', results.generate());
+		new fileExporter(answers[2], outputPath + '/controllers', results.generateController());
+		new fileExporter(answers[0], outputPath + '/model', results.generateModel());
+		//process.exit(0);
 	}	
 }
 
