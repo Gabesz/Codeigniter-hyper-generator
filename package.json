@@ -9,6 +9,7 @@
   "author": "Gabesz",
   "license": "ISC",
   "dependencies": {
+    "filter-object": "^3.0.0",
     "readline-sync": "^1.4.7"
   }
 }
