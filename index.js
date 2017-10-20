@@ -1,22 +1,28 @@
+/**
+ * todo list
+ * create classBuilder
+ * create fileExporter
+ */
+
 //dependencies
-var comment = require('./src/comment.js');
-var fnBuilder = require('./src/fnBuilder');
-var readlineSync = require('readline-sync');
-var fs = require('fs');
-var filter = require('filter-object');
-var vs = require('./src/variables');
+var comment = require('./src/comment.js'),
+	fnBuilder = require('./src/fnBuilder'),
+	readlineSync = require('readline-sync'),
+	fs = require('fs'),
+	filter = require('filter-object'),
+	vs = require('./src/variables');
 
 //build some instance
 var commentInstance = new comment();
 var fnBuilderInstance = new fnBuilder();
 
 //global variables
-var nl = vs.vs.nl;
-var tab = vs.vs.tab;
-var outputPath = vs.vs.outputPath;
-var answers = vs.vs.answers;
-var questions = vs.vs.questions
-var index = vs.vs.index;
+var nl = vs.vs.nl,
+	tab = vs.vs.tab,
+	outputPath = vs.vs.outputPath,
+	answers = vs.vs.answers,
+	questions = vs.vs.questions,
+	index = vs.vs.index;
 
 function setQuestion(index) {
 	if(questions[index] != undefined){
