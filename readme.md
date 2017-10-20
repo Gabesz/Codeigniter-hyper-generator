@@ -1,5 +1,5 @@
 # Codeigniter 3.x generator 
-### Required 
+### Requirements 
  - Nodejs installed
 ### Installation
 $ npm install
