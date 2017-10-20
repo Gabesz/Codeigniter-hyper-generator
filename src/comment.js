@@ -59,7 +59,6 @@ module.exports = class comment {
 				c = filter(this.commentData, ['!param']);
 				c.name = 'Create method.';
 				c.description = 'Show create form.';
-				c.param = 'int $id';
 				c.return = 'void';
 				break;
 
