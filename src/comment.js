@@ -2,8 +2,8 @@
 var filter = require('filter-object');
 var vs = require('./variables');
 
+//export module
 module.exports = class comment {
-
 	constructor(commentData){
 		this.commentData = {
 			name 		: '[name]',
@@ -96,4 +96,4 @@ module.exports = class comment {
 		
 		this.data = c;
 	}
-}
+};

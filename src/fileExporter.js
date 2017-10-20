@@ -1,8 +1,8 @@
 //dependencies
 var fs = require('fs');
 
+//export module
 module.exports = class fileExporter {
-
     constructor(fileName, filePath, data){
         this.fileName = fileName;
         this.filePath = filePath;

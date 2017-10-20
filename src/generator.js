@@ -1,8 +1,10 @@
+//dependencies
 var classBuilder = require('./classBuilder.js');
 
+//export module
 module.exports = class generator {
-    
-    constructor(answers){
+    constructor(answers, vs){
+        this.vs = vs;
         this.defaultModelName = answers[0];
         this.defaultControllerName = answers[1];
         this.defaultExtendedController = answers[2];
@@ -15,7 +17,7 @@ module.exports = class generator {
 
     generate(){
         var classDefinition = 'class ' + this.defaultControllerName + ' extends ' + this.defaultExtendedController + ' { 	';
-        var classBuilderInstance = new classBuilder(classDefinition, '<?php', '?>');
+        var classBuilderInstance = new classBuilder(classDefinition, '<?php', '} '+ this.vs.nl + '?>');
     
         classBuilderInstance.addMethod('constructor', 'public function __construct()', [
             'parent::__construct();', 

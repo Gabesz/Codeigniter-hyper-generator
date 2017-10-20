@@ -1,4 +1,4 @@
-//variables
+//export variables
 exports.vs = {
 	nl: "\n",
 	tab : "\t",
@@ -15,4 +15,4 @@ exports.vs = {
 		'Add Delete to CRUD operations? enter -> yes',
 	],
 	index : 0
-}
+};

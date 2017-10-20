@@ -17,6 +17,7 @@ var outputPath = vs.vs.outputPath,
 	questions = vs.vs.questions,
 	index = vs.vs.index;
 
+//loop in questions recursive
 function setQuestion(index) {
 	if(questions[index] != undefined){
 		answers[index] = readlineSync.question(questions[index] + ' ');
@@ -27,9 +28,10 @@ function setQuestion(index) {
 		index++;
 		setQuestion(index);
 	}else{
-		var results = new generator(answers);
+		var results = new generator(answers, vs.vs);
 		new fileExporter(answers[1], outputPath + '/controller', results.generate());
 	}	
 }
 
+//start app
 setQuestion(index);

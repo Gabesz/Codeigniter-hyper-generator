@@ -1,6 +1,7 @@
 //dependencies
 var vs = require('./variables');
 
+//export module
 module.exports = class fnBuilder {
     constructor() {
         this.vs = vs.vs;
@@ -19,5 +20,5 @@ module.exports = class fnBuilder {
         }
         return inline;
     } 
-}
+};
 

@@ -4,8 +4,8 @@ var vs = require('./variables'),
     classBuilder =  require('./classBuilder.js'),
     fnBuilder = require('./fnBuilder');
 
+//export module
 module.exports = class classBuilder {
-
     constructor(classDefinition, openTag, closeTag){
         this.nl = vs.vs.nl;
         this.tab = vs.vs.tab;
@@ -28,4 +28,4 @@ module.exports = class classBuilder {
     getClassSourceString(){
         return this.openTag + this.classDefinition + this.classSource.join("") + this.closeTag;
     }
-}
+};
