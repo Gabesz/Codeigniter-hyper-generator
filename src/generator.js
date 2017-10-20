@@ -16,7 +16,7 @@ module.exports = class generator {
     }
 
     generate(){
-        var classDefinition = 'class ' + this.defaultControllerName + ' extends ' + this.defaultExtendedController + ' { 	';
+        var classDefinition = 'class ' + this.defaultControllerName + ' extends ' + this.defaultExtendedController + ' {';
         var classBuilderInstance = new classBuilder(classDefinition, '<?php', '} '+ this.vs.nl + '?>');
     
         classBuilderInstance.addMethod('constructor', 'public function __construct()', [
